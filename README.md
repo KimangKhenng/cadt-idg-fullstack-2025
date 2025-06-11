@@ -1,6 +1,6 @@
 # Welcome Abroad
 
-Welcome aboard to our FullStack development course batch 2 at CADT-IDG!
+Welcome aboard to our FullStack development course batch 3 at CADT-IDG!
 
 We're thrilled to have you join us on this exciting journey of exploration, learning, and growth in the realms of fullstack development.
 
