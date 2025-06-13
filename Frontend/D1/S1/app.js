@@ -1,22 +1,15 @@
 const app = Vue.createApp({
     data() {
         return {
-            message: 'Welcome to Vue!',
-            count: 0,
-        };
+            message: 'Hello World!',
+            count: 0
+        }
     },
-    methods:{
-        increment(){
-            this.count++
-            if(this.count == 10){
-                this.message = `You have reached ${this.count}`
-            }else{
-                this.message = `You have not reached ${this.count}`
-            }
-        },
-        decrement(){
-            this.count--
+    methods: {
+        Increment() {
+            this.count = this.count + 1
+            // this.count++
         }
     }
-});
-app.mount('#app');
+})
+app.mount('#app')

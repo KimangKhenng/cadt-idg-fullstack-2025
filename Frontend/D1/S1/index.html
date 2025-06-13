@@ -1,25 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FullStack CADT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
     <div id="app">
-        <h1>Hello, FullStack CADT!</h1>
-        <p>Welcome to our first day!</p>
-        <input type="text" placeholder="Type something" v-model="message"/>
-        <p>{{ message }}</p>
-        <p>{{ count }}</p>
-        <p>{{ count }}</p>
-        <button @click="increment">Increase Count</button>
-        <button @click="decrement">Decrease Count</button>
+        <h1 class="text-red-600">Hello {{count}}</h1>
+        <p>{{message}}</p>
+        <input type="text" placeholder="Please holder" v-model="message" />
+        <br />
+        <button @click="Increment" class="w-25 h-10 bg-blue-400">increase</button>
     </div>
-    <script src="app.js"></script>
+    <script src="app.js">
+    </script>
 </body>
 
 </html>

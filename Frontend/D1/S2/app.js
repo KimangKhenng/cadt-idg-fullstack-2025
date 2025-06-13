@@ -1,23 +1,30 @@
 const app = Vue.createApp({
     data() {
         return {
-            todos:[],
+            todos: [],
+            /**
+             * complete.length 
+             */
             complete: [],
             task: ''
         };
     },
-    methods:{
-        addToList(){
+    methods: {
+        addToList() {
             if (this.task.trim() !== '') {
-                this.todos.push(this.task)
+                this.todos.push({ task: this.task, edit: false })
                 this.task = ''
             }
         },
-        deleteTask(index){
+        deleteTask(index) {
             console.log("Hello")
+            this.todos.splice(index, 1);
         },
-        completeTask(index){
+        completeTask(index) {
             console.log("Complete")
+        },
+        setEdit(index) {
+            this.todos[index].edit = true;
         }
     }
 });

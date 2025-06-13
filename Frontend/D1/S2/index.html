@@ -15,10 +15,18 @@
         <input type="text" placeholder="បោសផ្ទះ" v-model="task">
         <button @click="addToList">Add Task</button>
         <ul>
-            <li v-for="(task, index) in todos" :key="index">
-                {{ task }}
-                <button @click="deleteTask">Delete</button>
-                <button @click="completeTask">Complete</button>
+            <li v-for="(item, index) in todos" :key="index">
+                <div v-if="item.edit == false">
+                    <p> {{ item.task }}</p>
+                    <button @click="deleteTask">Delete</button>
+                    <button @click="completeTask">Complete</button>
+                    <button @click="setEdit(index)">Edit</button>
+                </div>
+                <div v-else>
+                    <input v-model="item.task" />
+                    <button>Finish</button>
+                    <button>Cancel</button>
+                </div>
             </li>
         </ul>
     </div>
